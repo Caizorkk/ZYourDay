@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-<defs><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.7"/></filter></defs>
-<rect x="2" y="2" width="60" height="60" rx="17" fill="#090B12"/>
-<rect x="2.5" y="2.5" width="59" height="59" rx="16.5" fill="none" stroke="#975BFF" stroke-opacity=".65"/>
-<text x="32" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="41" font-weight="900" fill="#975BFF" filter="url(#glow)">Z</text>
-<text x="32" y="45" text-anchor="middle" font-family="Arial,sans-serif" font-size="41" font-weight="900" fill="#FFFFFF">Z</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="2" y="2" width="60" height="60" rx="17" fill="#17111f"/><rect x="3" y="3" width="58" height="58" rx="16" stroke="#a270ff" stroke-opacity=".6" fill="none"/><text x="32" y="45" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="40" font-weight="800" fill="#fff">Z</text></svg>
