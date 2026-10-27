@@ -2,6 +2,15 @@
 
 Organizador web com tarefas, ideias, calculadora, anotações em cartões, editor de documentos, planilhas com fórmulas básicas, calendário, planejador de investimentos, área mista (quatro ferramentas), guia e doações por Pix.
 
+## Instalação no GitHub Pages
+
+### Já tem o Zork no GitHub?
+
+1. **Faça um backup pelo próprio site** antes de trocar a versão (Configurações → Baixar backup).
+2. Copie **somente `index.html`** desta versão para a **raiz** do repositório (onde está o arquivo atual).
+3. Clique em **Commit changes** e aguarde o GitHub Pages publicar. Atualize usando **Ctrl + F5**.
+4. **Não substitua o seu `config.js` atual**, caso já tenha configurado o Firebase. A atualização usa as mesmas chaves de armazenamento (`zork-organiza-v1`) da V1; as anotações não são excluídas pela troca do arquivo.
+
 ### Novo repositório
 
 Envie o conteúdo deste ZIP para a raiz do repositório e, em **Settings → Pages**, selecione **Deploy from a branch → main → / (root)**. A URL seguirá o formato `https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/`. A página de entrada precisa se chamar `index.html`.
