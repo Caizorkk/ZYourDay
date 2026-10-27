@@ -1,3 +1,24 @@
+## Correção visual da logo — V2.2
+
+O banner mantém o degradê violeta original; somente a logo Z alterna cores. No escuro: logo preta com borda e Z brancos. No claro: logo branca com borda e Z pretos. Funcionalidades e Firebase permanecem inalterados.
+
+# Zork Organiza — V2.2 (ajuste conservador da V2)
+
+Atualização visual baseada **na V2 Ajustada**: banner monocromático invertido pelo tema (no escuro, branco; no claro, preto), bordas contrastantes e cards arredondados. O quadro "Seu espaço, suas ferramentas" deu lugar ao **Bloco de notas** funcional, em uma coluna igual à de **Atividades**. O novo campo permite criar notas rápidas e as notas antigas continuam disponíveis.
+
+Atenção: **a autenticação Firebase ainda exige configurar um projeto seu**. Este pacote não cria projeto Firebase nem dispõe de credenciais suas. A conexão funciona após preencher `config.js` e ativar Authentication/Firestore/regras no seu Firebase. Antes de publicar, mantenha o seu `config.js` já configurado, se existir. Em uma instalação nova, siga estas etapas:
+
+1. Abra https://console.firebase.google.com/ e crie um projeto (o plano gratuito Spark costuma ser suficiente para testes pequenos, sujeito às quotas do Firebase).
+2. Clique em **Configurações do projeto → Seus apps → Web** para cadastrar o site e copiar as propriedades públicas `apiKey`, `authDomain`, `projectId` e `appId`.
+3. No `config.js` da raiz do GitHub, substitua `window.ZORK_FIREBASE_CONFIG = null` por `window.ZORK_FIREBASE_CONFIG = { apiKey: "...", authDomain: "...", projectId: "...", appId: "..." };` usando **somente os valores públicos do aplicativo Web**. Não insira senha privada ou chave de administrador.
+4. Em **Authentication → Sign-in method**, ative Google e Email/Password conforme preferir. Em **Authentication → Settings → Authorized domains**, inclua `caizorkk.github.io` (sem `/Zork/`).
+5. Em **Firestore Database**, crie um banco e substitua o conteúdo de **Rules** pelo arquivo `firebase.rules` incluído neste pacote; clique em **Publish**.
+6. No GitHub Pages, publique o `index.html` novo e `config.js` ajustado. Teste o login com duas contas e a sincronização celular/PC, preservando a privacidade dos dados.
+
+**Publicação rápida:** baixe o ZIP com apenas `index.html`, substitua no repositório, faça commit e force a atualização com Ctrl+F5. Faça um backup JSON pelo aplicativo antes. O armazenamento local usa a mesma chave de versões anteriores, sem migração.
+
+---
+
 # Zork Organiza — V2 ajustada (base original preservada)
 
 Esta versão foi feita **a partir do ZIP V2 original fornecido pelo criador**, sem usar a V3. Mantém os mesmos módulos, armazenamento local e integração opcional com Firebase.
