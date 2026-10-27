@@ -59,3 +59,46 @@ body[data-theme='galaxy-night'] .hero{background:radial-gradient(circle at 78% 2
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal-on-scroll{opacity:1!important;transform:none!important}}
 
 .brand-mark .avatar-glyph,.brand-mark .avatar-letter{color:#fff}.top-pill{display:flex!important}.avatar-fallback{font-family:'Outfit',sans-serif;font-weight:850;font-size:1.02em;line-height:1;text-transform:uppercase}
+
+/* V3 brand and topbar: logo, browser favicon and user avatar are independent. */
+.brand{align-items:center;min-width:0;gap:12px;margin:0 5px 28px;padding:7px 2px;}
+.brand > div:last-child{min-width:0;flex:1;}
+.brand strong{display:flex;align-items:baseline;gap:5px;white-space:nowrap;font-family:'Outfit',sans-serif;font-size:18px;font-weight:850;letter-spacing:-.04em;}
+.brand .brand-fixed{font-weight:900;color:var(--text);}
+.brand #brand-suffix{font-weight:700;color:var(--accent);}
+.brand small{color:var(--muted);font-family:'Plus Jakarta Sans',sans-serif;font-weight:550;letter-spacing:0;font-size:10px;}
+.brand-mark{height:47px;width:47px;flex:0 0 47px;border-radius:15px;background:#090b12;border:1px solid color-mix(in srgb,var(--accent) 62%,transparent);box-shadow:0 0 0 1px color-mix(in srgb,var(--accent) 14%,transparent),0 6px 28px color-mix(in srgb,var(--accent) 20%,transparent),inset 0 0 15px color-mix(in srgb,var(--accent) 12%,transparent);}
+.brand-mark .logo-z{display:block;font-family:'Outfit',sans-serif;font-size:30px;font-weight:900;letter-spacing:-.09em;padding-right:3px;color:#fff;text-shadow:0 0 8px color-mix(in srgb,var(--accent) 80%,white),0 0 21px var(--accent),0 0 34px color-mix(in srgb,var(--accent) 55%,transparent);}
+.topbar{gap:20px;min-width:0;}
+.breadcrumbs{color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;}
+.topbar-right{flex:none;gap:20px;min-width:0;}
+.top-pill{flex:none;display:inline-flex;gap:12px;align-items:center;justify-content:center;background:var(--surface);border:1px solid var(--stroke);color:var(--text);padding:10px 14px;line-height:1.1;border-radius:12px;font-size:11px;font-weight:750;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.top-pill time{font-variant-numeric:tabular-nums;}
+.top-clock{display:flex;gap:7px;align-items:center;font-size:11px;color:var(--accent);}
+.header-profile{display:flex;gap:12px;align-items:center;min-width:0;}
+.header-profile-name{color:var(--muted);font-size:12px;font-weight:800;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.top-avatar{border-radius:50%;height:42px;width:42px;min-width:42px;display:grid;place-items:center;padding:0;overflow:hidden;background:var(--accent-soft);border:2px solid color-mix(in srgb,var(--accent) 55%,var(--stroke));box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 10%,transparent);}
+.top-avatar .avatar-image,.account-mini .avatar-image,.profile-preview .avatar-image{width:100%;height:100%;object-fit:cover;display:block;}
+.top-avatar .avatar-letter{font-size:20px;line-height:1;font-weight:850;}
+.top-avatar .avatar-fallback{display:grid;place-items:center;}
+.top-avatar .avatar-fallback svg{width:20px;height:20px;}
+.account-mini .avatar{width:38px;height:38px;flex:none;overflow:hidden;display:grid;place-items:center;background:var(--accent-soft);}
+.account-mini .avatar-fallback{display:grid;place-items:center;}
+.profile-preview .avatar-fallback{display:grid;place-items:center;color:var(--accent);}
+.profile-preview .avatar-fallback svg{width:32px;height:32px;}
+/* Clean hero: no user photo, no star, no standalone logo badge. */
+.hero{min-height:295px;display:flex;align-items:center;background:radial-gradient(ellipse at 95% 8%,rgba(223,147,255,.38),transparent 52%),linear-gradient(113deg,#3b1b7e,#7430ad 66%,#9452cd);border:1px solid rgba(197,141,255,.52);box-shadow:0 16px 50px rgba(75,28,135,.14);}
+.hero::before{background-image:linear-gradient(115deg,transparent 60%,rgba(255,255,255,.06));mask-image:none;opacity:.65;}
+.hero::after{width:550px;height:550px;aspect-ratio:auto;right:-15%;bottom:-135%;border:1px solid rgba(255,255,255,.09);box-shadow:0 0 0 85px rgba(255,255,255,.016),0 0 0 170px rgba(255,255,255,.012);}
+.hero-inner{max-width:680px;width:100%;}
+.hero h1{font-family:'Outfit',sans-serif;font-size:clamp(35px,3.5vw,52px);font-weight:850;line-height:1.075;letter-spacing:-.043em;}
+.hero p{font-family:'Plus Jakarta Sans',sans-serif;font-size:13.4px;max-width:510px;line-height:1.9;}
+.hero-decor,.hero-orb{display:none!important;}
+body[data-theme='galaxy'] .hero{background:radial-gradient(circle at 85% 10%,rgba(245,166,255,.4),transparent 50%),linear-gradient(110deg,#6031b4,#9345be 70%,#b66ccf);}
+body[data-theme='galaxy-night'] .hero{background:radial-gradient(circle at 83% 5%,rgba(201,112,250,.3),transparent 50%),linear-gradient(110deg,#26134f,#65258c 70%,#7340a8);}
+@media(max-width:1150px){.header-profile-name{max-width:100px}}
+@media(max-width:900px){.topbar{padding-inline:18px;gap:12px}.topbar-right{gap:14px}.header-profile-name{display:none}.top-avatar{height:39px;width:39px;min-width:39px}.hero{min-height:270px}}
+@media(max-width:640px){.topbar{gap:8px}.topbar-right{gap:8px}.top-pill{border:0;background:none;padding:4px;gap:5px;flex-direction:column;align-items:end;font-size:9px}.top-clock{font-size:10px}.timezone{display:none}.top-avatar{height:36px;width:36px;min-width:36px;box-shadow:none}.hero{min-height:250px;padding:32px 26px}.hero h1{font-size:clamp(33px,8.2vw,44px)}.hero p{font-size:12px;line-height:1.8}.breadcrumbs{font-size:12px}}
+/* Flat, intentional gradient; remove legacy repeated-dot/star decorations. */
+.hero::before{background-image:linear-gradient(115deg,transparent 60%,rgba(255,255,255,.045));background-size:100% 100%;background-repeat:no-repeat;mask-image:none;opacity:1;}
+.hero::after{display:none;}
